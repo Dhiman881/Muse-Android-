@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.dhiman.muse.Fragments.MiniPlayerFragment">
+
+    <RelativeLayout
+        android:id="@+id/actual_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/playback_controls_padding">
+        <LinearLayout
+                android:id="@+id/play_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/play_pause"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_play_arrow_white_24dp"
+                android:tint="@color/light_blue_primary"
+                android:tintMode="src_in" />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:id="@+id/progress_bar_mini_fragment"
+                android:progressBackgroundTint="@color/light_blue_primary"
+                android:progressBackgroundTintMode="src_in"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/test_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/music_icon_id"
+            android:layout_toStartOf="@+id/play_action"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/songTitleMiniFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Best Song"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/songArtistMiniFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artist"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/music_icon_id"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/music_alubum_art"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

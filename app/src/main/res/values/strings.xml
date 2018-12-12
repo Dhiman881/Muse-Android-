@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Muse</string>
+    <string name ="muse_base_url"> http://192.168.19.133:3000/</string>
+</resources>
